@@ -1,0 +1,22 @@
+// ==UserScript==
+// @name         Change all fonts to Montserrat
+// @description  Change annoying fonts to a more readable one
+// @version      0.4.5
+// @author       Mikhail5555 Mod by Bow
+// @copyright    2018, Mikhail5555 (https://openuserjs.org/users/mikhail5555)
+// @license      MIT
+// @match        *://*/*
+// @exclude      https://openuserjs.org/scripts/*/source
+// @grant        GM_addStyle
+// @grant        GM_getResourceText
+// @resource     customCSS https://fonts.googleapis.com/css2?family=Montserrat
+// @run-at       document-start
+// @updateURL    https://raw.githubusercontent.com/StretchBow/vnpad/main/JS%20font?token=GHSAT0AAAAAABYLCYREMDYOC3L2LPVRHBPGYYS3H4Q
+// ==/UserScript==
+
+var newCSS = GM_getResourceText("customCSS");
+GM_addStyle(newCSS);
+
+let font = '"Montserrat", sans-serif';
+let selectors = ' a, .mb15.short_intro, article.art_item, .clearfix.inner_section.the-article-header, .text, title_news, root, div, .LeUQr, html, strong, body, p, h1, h2, h3, h4, h5, label, a:not([class*="icon"]) element, .submit, button, b, cite, time, li, la, section, td, address, link, article, main, footer, nav, code, pre, select';
+GM_addStyle(selectors + '{font-family: ' + font + ' !important;}');
