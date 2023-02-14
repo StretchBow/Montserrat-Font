@@ -9,9 +9,10 @@
 // @exclude      https://openuserjs.org/scripts/*/source
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
+// @fetch        https://fonts.googleapis.com/css2?family=Montserrat
 // @resource     customCSS https://fonts.googleapis.com/css2?family=Montserrat
 // @run-at       document-start
-// @updateURL    https://raw.githubusercontent.com/StretchBow/vnpad/main/JS%20font?token=GHSAT0AAAAAABYLCYREMDYOC3L2LPVRHBPGYYS3H4Q
+// @updateURL    https://raw.githubusercontent.com/StretchBow/Montserrat-Font/main/Font
 // ==/UserScript==
 
 var newCSS = GM_getResourceText("customCSS");
